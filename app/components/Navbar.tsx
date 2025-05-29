@@ -8,7 +8,7 @@ const Navbar = async () => {
 
   return (
     <header className='px-5 py-3 bg-white shadow-sm font-work-sans text-black'>
-        <nav className='flex justify-between items-center'>
+        <nav className='flex flex-nowrap justify-between items-center'>
             <Link href='/'>
                 <Image src='/logo.png' alt='My App Logo' width={144} height={30}/>
             </Link>

@@ -4,6 +4,8 @@
 
 :root {
   --radius: 0.5rem;
+  --color-primary: rgb(222, 121, 187);
+  --color-primary-100: #f8eef4;
 }
 
 @layer utilities {

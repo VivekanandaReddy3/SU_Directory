@@ -112,26 +112,26 @@
     border-left: 10px solid transparent;
   }
 
-  .heading {
-    text-transform: uppercase;
-    background-color: black;
-    padding: 12px 24px;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 800;
-    color: white;
-    font-size: 36px;
-    line-height: 46px;
-    max-width: 1024px;
-    text-align: center;
-    margin: 20px 0;
-  }
+.heading {
+  text-transform: uppercase;
+  background-color: black;
+  padding: 12px 24px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 800;
+  color: white;
+  font-size: 36px;
+  line-height: 46px;
+  max-width: 80rem;
+  text-align: center;
+  margin: 20px 0;
+}
 
-  @media (min-width: 640px) {
-    .heading {
-      font-size: 54px;
-      line-height: 64px;
-    }
+@media (min-width: 640px) {
+  .heading {
+    font-size: 54px;
+    line-height: 64px;
   }
+}
 
   .sub-heading {
     font-weight: 500;

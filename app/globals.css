@@ -87,7 +87,7 @@
   .tag {
     background-color: var(--color-secondary);
     padding: 12px 24px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-weight: 700;
     border-radius: 2px;
     text-transform: uppercase;
@@ -95,7 +95,7 @@
   }
 
   .tag::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 8px;
     left: 8px;
@@ -104,7 +104,7 @@
   }
 
   .tag::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 8px;
     right: 8px;
@@ -112,26 +112,26 @@
     border-left: 10px solid transparent;
   }
 
-.heading {
-  text-transform: uppercase;
-  background-color: black;
-  padding: 12px 24px;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 800;
-  color: white;
-  font-size: 36px;
-  line-height: 46px;
-  max-width: 80rem;
-  text-align: center;
-  margin: 20px 0;
-}
-
-@media (min-width: 640px) {
   .heading {
-    font-size: 54px;
-    line-height: 64px;
+    text-transform: uppercase;
+    background-color: black;
+    padding: 12px 24px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 800;
+    color: white;
+    font-size: 36px;
+    line-height: 46px;
+    max-width: 80rem;
+    text-align: center;
+    margin: 20px 0;
   }
-}
+
+  @media (min-width: 640px) {
+    .heading {
+      font-size: 54px;
+      line-height: 64px;
+    }
+  }
 
   .sub-heading {
     font-weight: 500;
@@ -236,7 +236,7 @@
   }
 
   .profile_title::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4px;
     right: 0;
@@ -249,7 +249,7 @@
   }
 
   .profile_title::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -4px;
     left: 0;
@@ -313,7 +313,7 @@
     color: black;
     position: relative;
     box-shadow: var(--shadow-100);
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-weight: 500;
     transition: all 0.5s;
   }

@@ -4,14 +4,14 @@ import Image from "next/image";
 import Link from "next/link"
 import { Button } from "./ui/button";
 import { Author, Startup } from "@/sanity/types";
-import { author } from "@/sanity/schemaTypes/author";
 
 
-export type StartupCardType = Omit<Startup, "author"> & {author?: Author}
+
+export type StartupCardType = Omit<Startup, "author"> & { author?: Author };
 
 const StartupCard = ({post} : {post : StartupCardType}) => {
 
-    const { _createdAt, views, title, category, _id, image, description} = post;
+    const { _createdAt, views, title, category, _id, image, description, author} = post;
 
   return (
     <li className='startup-card group'>
@@ -51,7 +51,7 @@ const StartupCard = ({post} : {post : StartupCardType}) => {
         </Link>
 
         <div className="flex-between gap-3 mt-5">
-            <Link href={`/?query=${category.toLowerCase()}`}>
+            <Link href={`/?query=${category?.toLowerCase()}`}>
                 <p className="text-16-medium">
                     {category}
                 </p>

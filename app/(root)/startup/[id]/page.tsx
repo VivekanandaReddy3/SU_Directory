@@ -2,10 +2,12 @@ import { formatDate } from '@/lib/utils';
 import { client } from '@/sanity/lib/client';
 import { STARTUP_BY_ID_QUERY } from '@/sanity/lib/queries';
 import { notFound } from 'next/navigation';
-import React from 'react'
+import React, { Suspense } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import markdownit from 'markdown-it'
+import { Skeleton } from '@/components/ui/skeleton';
+import View from '@/components/View';
 
 const md = markdownit();
 
@@ -52,7 +54,6 @@ const page = async ({params} : {params:Promise<{id:string}>}) => {
               </p>
             </div>
           </Link>
-
           <p className='category-tag'>
             {post.category}
           </p>
@@ -62,23 +63,31 @@ const page = async ({params} : {params:Promise<{id:string}>}) => {
         </h3>
         {parsedContent ? (
           <article
-            className='prose'
+            className='prose max-w-4xl font-work-sans break-all'
             dangerouslySetInnerHTML={{ __html: parsedContent}}
           />
         ):(
           <p className='no-result'>
-              No Details
+              No Details Provided.
           </p>
         ) }
       </div>
 
+      <hr className='divider'/>
+
+        {/* {TODO: EDITOR SELECTED STARTUPS} */}
 
 
     </section>
 
-    <h1 className='text-3xl'>
+    {/* <h1 className='text-3xl'>
        {post.title}
-    </h1>
+    </h1> */}
+
+    <Suspense fallback={<Skeleton className='view_skeleton'/>}>
+        <View id={id} />
+    </Suspense>
+
     </>
   )
 }

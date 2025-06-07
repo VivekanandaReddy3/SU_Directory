@@ -5,6 +5,9 @@ import { notFound } from 'next/navigation';
 import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
+import markdownit from 'markdown-it'
+
+const md = markdownit();
 
 export const experimental_ppr = true;
 
@@ -15,6 +18,8 @@ const page = async ({params} : {params:Promise<{id:string}>}) => {
 
     const post = await client.fetch(STARTUP_BY_ID_QUERY,{id});
     if(!post) return notFound();
+
+    const parsedContent = md.render(post?.pitch|| '')
 
 
   return (
@@ -55,6 +60,16 @@ const page = async ({params} : {params:Promise<{id:string}>}) => {
         <h3 className='text-30-bold'>
           Pitch Details
         </h3>
+        {parsedContent ? (
+          <article
+            className='prose'
+            dangerouslySetInnerHTML={{ __html: parsedContent}}
+          />
+        ):(
+          <p className='no-result'>
+              No Details
+          </p>
+        ) }
       </div>
 
 

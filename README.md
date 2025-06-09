@@ -1,4 +1,4 @@
-```markdown
+
 # 🚀 SU Directory
 
 **SU Directory** is a dynamic startup directory platform that empowers entrepreneurs to connect, explore innovative startups, and pitch their own ventures. Built with a modern tech stack including **Next.js**, **NextAuth.js**, **Sanity CMS**, and **TypeScript**, this platform delivers a seamless, secure, and interactive experience for the startup community.

@@ -123,5 +123,3 @@ For questions, feedback, or support, please reach out to:
 - **GitHub**: [VivekanandaReddy3](https://github.com/VivekanandaReddy3)
 
 
-Thank you for using **SU Directory**! Join the startup community and start connecting today! 🚀
-```
